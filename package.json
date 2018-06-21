@@ -1,0 +1,62 @@
+{
+  "name": "primenumberapi",
+  "version": "1.0.0",
+  "description": "prime number api service",
+  "main": "./bin/www",
+  "scripts": {
+    "start": "cross-env NODE_PATH=src/ nodemon scripts/start.js --exec babel-node",
+    "build": "cross-env NODE_PATH=src/ node scripts/build.js",
+    "test": "cross-env NODE_PATH=src/ && jest",
+    "lint": "jshint --exclude ./.hintignore .",
+    "pretest": "npm run lint"
+  },
+  "author": "joelbarbosa.ads@gmail.com",
+  "license": "MIT",
+  "dependencies": {
+    "babel-runtime": "^6.26.0",
+    "body-parser": "^1.17.2",
+    "compression": "^1.7.0",
+    "config.json": "0.0.4",
+    "cookie-parser": "^1.4.3",
+    "cors": "^2.8.3",
+    "dotenv": "^4.0.0",
+    "es6-error": "^4.0.2",
+    "express": "^4.15.3",
+    "express-query-int": "^1.0.1",
+    "helmet": "^3.8.1",
+    "morgan": "^1.8.2",
+    "winston": "^2.3.1",
+    "winston-daily-rotate-file": "^1.7.0"
+  },
+  "devDependencies": {
+    "assert": "^1.4.1",
+    "babel-cli": "^6.24.1",
+    "babel-core": "^6.26.0",
+    "babel-polyfill": "^6.26.0",
+    "babel-preset-es2015": "^6.24.1",
+    "babel-preset-stage-2": "^6.24.1",
+    "babel-register": "^6.24.1",
+    "chai": "^4.1.2",
+    "cross-env": "^5.2.0",
+    "expect": "^1.20.2",
+    "jest": "^23.1.0",
+    "jshint": "^2.9.4",
+    "mocha": "^3.4.2",
+    "nodemon": "^1.11.0",
+    "should": "^11.2.1",
+    "supertest": "^3.0.0"
+  },
+  "jest": {
+    "verbose": true,
+    "collectCoverageFrom": [
+      "./src/**/**/*.js"
+    ],
+    "testMatch": [
+      "*/src/tests/**/**/*.js",
+      "**/?(*.)(spec|test).js?(x)"
+    ],
+    "testPathIgnorePatterns": [
+      "/scripts/test"
+    ]
+  }
+}

@@ -1,0 +1,14 @@
+{
+    "curly": true,
+    "eqeqeq": true,
+    "undef": true,
+    "nocomma": false,
+    "unused": false,
+    "mocha": true,
+    "esversion": 6,
+    "asi" : true,
+    "globals": {
+      "console": false,
+      "process": false
+    }
+  }

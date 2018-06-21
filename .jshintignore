@@ -1,0 +1,4 @@
+config/
+scripts/
+node_modules/
+/src/tests/
