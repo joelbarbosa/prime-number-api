@@ -25,8 +25,8 @@
     "express-query-int": "^1.0.1",
     "helmet": "^3.8.1",
     "morgan": "^1.8.2",
-    "winston": "^2.3.1",
-    "winston-daily-rotate-file": "^1.7.0"
+    "winston": "^2.4.3",
+    "winston-daily-rotate-file": "^1.7.2"
   },
   "devDependencies": {
     "assert": "^1.4.1",

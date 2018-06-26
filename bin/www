@@ -1,2 +1,2 @@
 #!/usr/bin/env node
-import { server } from '../src/loader';
+import { server } from '../src/prime-api';
