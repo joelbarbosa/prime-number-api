@@ -1,10 +1,16 @@
 import express from 'express';
-import expressConfig from './express-config';
+import compression from 'compression';
+import cookieParser from 'cookie-parser';
+import bodyParser from 'body-parser';
+import cors from 'cors';
+import corsOptions from './cors';
+import queryParse from 'express-query-int';
+import helmet from 'helmet';
 import routes from './routes';
 
-const app = express();
+const app = null;
 
 const expressServices = [
-  expressConfig(app),
+  //expressConfig(app),
   routes.init(app)
 ];
