@@ -12,9 +12,9 @@ test("appFactory should be instantiate", () => {
 
 test("appFactory should be config", () => {
   const app = appFactory(express());
-  const fakeConfigFns = [
-    (req, res, next = () => {}) => next(),
-    (req, res, next = () => {}) => next(),
+  const middlewares = [
+    (req, res, next = () => {}) => next,
+    (req, res, next = () => {}) => next,
   ];
-  app(fakeConfigFns);
+  app(middlewares);
 });

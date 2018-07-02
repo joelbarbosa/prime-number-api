@@ -1,6 +1,5 @@
 import isRequired from 'utils/isRequired';
 import Log from 'config/log';
-import { EDESTADDRREQ } from 'constants';
 
 /**
  * routes configurations
@@ -8,6 +7,9 @@ import { EDESTADDRREQ } from 'constants';
  */
 const init = (app = isRequired()) => {
   const routesApis = [];
+  app.get('/', (req, res) => {
+    console.log('Ola Mundo')
+  });
 }
 
 export default init;
