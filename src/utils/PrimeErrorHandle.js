@@ -1,7 +1,7 @@
 import ExtendableError from 'es6-error';
 import Log from 'config/winston';
 
-class PrimeNumberErrorHandle extends ExtendableError {
+class PrimeErrorHandle extends ExtendableError {
 
   constructor(message = 'Error occurred in application.') {
     super(message);
@@ -30,4 +30,4 @@ class PrimeNumberErrorHandle extends ExtendableError {
 
 }
 
-export default PrimeNumberErrorHandle;
+export default PrimeErrorHandle;

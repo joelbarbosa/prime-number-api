@@ -17,7 +17,7 @@ const Log = new (winston.Logger) ({
       level: 'info'
     }),
     new (winstonDaily) ({
-      filename: `${logDir}/-messagebird.log`,
+      filename: `${logDir}/-prime-number.log`,
       timestamp: tsFormat,
       datePattern: 'yyyy-MM-dd',
       prepend: true,

@@ -1,6 +1,3 @@
-import app from 'config/app';
-import server from 'config/server';
+import server from './config/server';
 
-export { app,
-         server
-       };
+export default server;

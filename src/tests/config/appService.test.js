@@ -1,20 +1,20 @@
 import express from 'express';
 import appService from '../../config/appService';
 
-test("appService should be throw error", () => {
+test("appFactory should be throw error", () => {
   expect(() => appService()).toThrowError();
 });
 
-test("appService should be instantiate", () => {
+test("appFactory should be instantiate", () => {
   const app = appService(express());
   expect(app()).toBeTruthy();
 });
 
-test("appService should be config", () => {
+test("appFactory should be config", () => {
   const app = appService(express());
   const middlewares = [
-    (req, res, next = () => {}) => next,
-    (req, res, next = () => {}) => next,
+    (req, res, next = () => ({})) => next,
+    (req, res, next = () => ({})) => next,
   ];
-  expect(app(middlewares)).toBeTruthy();
+  app(middlewares);
 });

@@ -1,9 +1,12 @@
+import isRequired from 'utils/isRequired';
+
 /**
- * Base configuration for application server
+ * Middleware configuration for application server
  * @param {server} appServer Application service some like: express, hapi, etc...
  */
-const configServer = (appServer, ...fns) => {
-  fns.forEach(fn => appServer.use(fn()))
+const configServer = (appServer = isRequired(), ...fns) => {
+  fns.forEach(fn => appServer.use(fn()));
+  return appServer;
 }
 
 export default configServer;

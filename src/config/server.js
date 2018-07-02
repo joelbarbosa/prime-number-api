@@ -1,12 +1,9 @@
-import { app } from './app';
+import app from './app';
+import { onListening, onError } from './listen_server';
 import http from 'http';
 
-const server = http.createServer(app)
-  .listen(normalizeToDecimal(process.env.PORT));
+const server = http.createServer(app()).listen(process.env.PORT);
 
-  /**
- * Listen on provided all network interfaces.
-*/
 server.on('listening', () => onListening(server.address()));
 server.on('error', onError);
 

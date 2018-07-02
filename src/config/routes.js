@@ -1,15 +1,13 @@
-import isRequired from 'utils/isRequired';
-import Log from 'config/log';
+import isRequired from '../utils/isRequired';
 
 /**
  * routes configurations
  * @param {ApplicationService} app
  */
-const init = (app = isRequired()) => {
-  const routesApis = [];
+const init = (app) => {
   app.get('/', (req, res) => {
-    console.log('Ola Mundo')
+    return res.status(200).json({ app: 'WORKING...' });
   });
 }
 
-export default init;
+export default { init };
