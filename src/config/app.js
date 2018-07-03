@@ -12,10 +12,11 @@ import { callChainFunctions } from '../utils/functions_utils';
 
 /**
  * Instantiate application service
+ * @param {Array} middlewares to deploy application
  */
-const app = appService(express());
+const deploy = middlewares => appService(express())(middlewares);
 
-const appWithMiddleware = () => app([
+const app = deploy([
   compression,
   cors,
   () => bodyParser.urlencoded({ extended: true }),
@@ -23,14 +24,10 @@ const appWithMiddleware = () => app([
   queryParse,
   cookieParser,
   helmet,
-  () => new PrimeErrorHandle()._genericErrorHandle()
+  () => new PrimeErrorHandle()._genericErrorHandle(),
 ]);
 
-const initApplicationByPriority = [
-  routes.init(appWithMiddleware())
-];
-
-callChainFunctions(initApplicationByPriority)
+callChainFunctions(Array(routes.init(app, express.Router)))
   .catch(reason => new PrimeErrorHandle('Error on start application')._logConsole(reason));
 
 export default app;

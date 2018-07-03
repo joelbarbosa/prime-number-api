@@ -1,0 +1,7 @@
+{
+  "name": "PrimeNumberApi",
+  "version": "0.0.1",
+  "description": "apiDoc prime-number-api service",
+  "title": "prime-number-api",
+  "url" : "http://localhost:8080/v1"
+}

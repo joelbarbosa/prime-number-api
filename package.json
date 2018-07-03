@@ -8,7 +8,8 @@
     "build": "cross-env NODE_PATH=src/ node scripts/build.js",
     "test": "cross-env NODE_PATH=src/ && jest",
     "lint": "jshint --exclude ./.hintignore .",
-    "pretest": "npm run lint"
+    "pretest": "npm run lint",
+    "apidoc": "apidoc -i src/apis/ -o doc/"
   },
   "author": "joelbarbosa.ads@gmail.com",
   "license": "MIT",
@@ -29,9 +30,11 @@
     "winston-daily-rotate-file": "^1.7.2"
   },
   "devDependencies": {
+    "apidoc": "^0.17.6",
     "assert": "^1.4.1",
     "babel-cli": "^6.24.1",
     "babel-core": "^6.26.0",
+    "babel-plugin-transform-async-to-generator": "^6.24.1",
     "babel-polyfill": "^6.26.0",
     "babel-preset-es2015": "^6.24.1",
     "babel-preset-stage-2": "^6.24.1",

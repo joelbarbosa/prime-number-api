@@ -3,6 +3,7 @@
     "plugins": [
       ["babel-polyfill", {
         "moduleName": "babel-runtime"
-      }]
+      }],
+      ["transform-async-to-generator"]
     ]
   }
