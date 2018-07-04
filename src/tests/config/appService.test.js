@@ -1,5 +1,5 @@
 import express from 'express';
-import appService from '../../config/appService';
+import appService from 'config/appService';
 
 test("appFactory should be throw error", () => {
   expect(() => appService()).toThrowError();

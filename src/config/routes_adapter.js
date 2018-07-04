@@ -8,16 +8,16 @@ const RoutesAdapter = (request, response) => {
    * @param {*} objectJson
    * @param {*}
    */
-  const asyncResponse = (objectJson = { status: 'success' }, options = { HTTP_STATUS_CODE: 200 }) => {
+  const asyncResponse = (data = { status: 'success' }, options = { HTTP_STATUS_CODE: 200 }) => {
     return new Promise(() => {
-      return res.status(options.HTTP_STATUS_CODE).json(objectJson);
+      return res.status(options.HTTP_STATUS_CODE).json(data);
     }).catch(err => {
       return res.errorResponse(500, 'internal error');
     });
   }
 
-  const errorResponse = (statusCode = 500, message = 'error') => {
-    return res.status(statusCode).json({ status: message });
+  const errorResponse = (status = 500, message = 'error') => {
+    return res.status(status).json({ status: message });
   }
 
   return {

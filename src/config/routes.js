@@ -1,7 +1,8 @@
-import genericApi from '../apis/api'
-import primeNumberApi from '../apis/primenumber/api'
+import genericApi from 'apis/api'
+import primeNumberApi from 'apis/primenumber/api'
 import { callParallelFunctions } from 'utils/functions_utils';
-import isRequired from '../utils/isRequired';
+import isRequired from 'utils/isRequired';
+import Log from './winston';
 
 /**
  * routes configurations

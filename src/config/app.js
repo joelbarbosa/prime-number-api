@@ -7,8 +7,8 @@ import queryParse from 'express-query-int';
 import helmet from 'helmet';
 import routes from './routes';
 import appService from './appService';
-import PrimeErrorHandle from '../utils/PrimeErrorHandle';
-import { callChainFunctions } from '../utils/functions_utils';
+import PrimeErrorHandle from 'utils/PrimeErrorHandle';
+import { callChainFunctions } from 'utils/functions_utils';
 
 /**
  * Instantiate application service

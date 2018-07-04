@@ -1,4 +1,4 @@
-import RoutesAdapter from '../config/routes_adapter';
+import RoutesAdapter from 'config/routes_adapter';
 
 const genericApi = app => {
 
@@ -13,8 +13,8 @@ const genericApi = app => {
   *       "status": "Server is working"
   *     }
   */
- app.get('/', async (req, res) => {
-   await RoutesAdapter(req, res).asyncResponse({ status: 'Server is working' });
+ app.get('/v1', async (req, res) => {
+   return await RoutesAdapter(req, res).asyncResponse({ status: 'Server is working' });
  });
 
 }

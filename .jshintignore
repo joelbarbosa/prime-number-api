@@ -2,3 +2,5 @@ config/
 scripts/
 node_modules/
 /src/tests/
+doc/
+src/apis

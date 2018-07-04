@@ -1,12 +1,12 @@
 {
-  "name": "primenumberapi",
+  "name": "app",
   "version": "1.0.0",
   "description": "prime number api service",
   "main": "./bin/www",
   "scripts": {
     "start": "cross-env NODE_PATH=src/ nodemon scripts/start.js --exec babel-node",
     "build": "cross-env NODE_PATH=src/ node scripts/build.js",
-    "test": "cross-env NODE_PATH=src/ && jest",
+    "test": "NODE_PATH=src/ jest",
     "lint": "jshint --exclude ./.hintignore .",
     "pretest": "npm run lint",
     "apidoc": "apidoc -i src/apis/ -o doc/"
@@ -43,7 +43,7 @@
     "cross-env": "^5.2.0",
     "expect": "^1.20.2",
     "jest": "^23.1.0",
-    "jshint": "^2.9.4",
+    "jshint": "^2.9.5",
     "mocha": "^3.4.2",
     "nodemon": "^1.11.0",
     "should": "^11.2.1",

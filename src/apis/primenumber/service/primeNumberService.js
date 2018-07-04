@@ -9,3 +9,17 @@ export const isPrime = (n, i = 2) => {
   if (i * i > n) return true;
   return isPrime(n, i + 1);
 }
+
+/**
+ * find next prime number
+ * @param {Number} n
+ */
+export const findNextPrime = n => {
+  const generateNext = next => {
+    if(isPrime(next)) {
+      return next;
+    }
+    return generateNext(next + 1);
+  }
+  return generateNext(n + 1);
+}

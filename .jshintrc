@@ -1,14 +1,17 @@
 {
-    "curly": true,
-    "eqeqeq": true,
-    "undef": true,
-    "nocomma": false,
-    "unused": false,
-    "mocha": true,
-    "esversion": 6,
-    "asi" : true,
-    "globals": {
-      "console": false,
-      "process": false
-    }
+  "esversion": 6,
+  "curly": false,
+  "eqeqeq": true,
+  "undef": true,
+  "nocomma": true,
+  "unused": false,
+  "asi": true,
+  "indent": 1,
+  "expr": false,
+  "-W034": true,
+  "-W138": true,
+  "globals": {
+    "console": false,
+    "process": false
   }
+}

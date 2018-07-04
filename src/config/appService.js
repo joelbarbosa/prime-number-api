@@ -1,5 +1,5 @@
 import configServer from './configServer';
-import isRequired from '../utils/isRequired';
+import isRequired from 'utils/isRequired';
 
 /**
  * instance your service provider.
